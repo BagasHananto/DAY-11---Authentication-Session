@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title.Title}}</title>
+    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" img scr="/public/asset/logo/logo.png" href="/"><img src="/public/asset/logo/logo.png" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 ms-3 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" aria-current="page" href="/">Home</a>
+                    </li>
+                    {{if .Data.IsLogin}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Project">Add Project</a>
+                    </li>
+                    {{end}}
+                </ul>
+                <div class="d-flex gap-3 justify-content-center">
+                    {{if .Data.IsLogin}}
+                    <a class="nav-link pt-2" href="/loginForm">Hallo, {{.Data.Username}}</a>
+                    <a class="nav-link pt-2 pe-4" href="/logout">Log Out</a> {{else}}
+                    <a class="nav-link pt-2" href="/signForm">Sign Up</a>
+                    <a class="nav-link pt-2 pe-4" href="/loginForm">Login</a> {{end}}
+                    <button class="btn btn-light btn-submit" type="button"><a href="/contactMe">Contact Me</a></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Navbar End-->
+    <!--Landing Page-->
+    <section>
+        <div class="container container-1 mt-5 mb-5">
+            <div class="d-flex pt-5 ps-5 pe-5 pb-5">
+                <div class="text">
+                    <h1 class="fw-bold mt-4">Hi Welcome To My Hut</h1>
+                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam faucibus purus in massa tempor nec feugiat. Quisque egestas diam in arcu cursus euismod. Id diam vel
+                        quam elementum pulvinar etiam non quam. Amet venenatis urna cursus eget nunc scelerisque. Sed turpis tincidunt id aliquet risus feugiat. Habitasse platea dictumst vestibulum rhoncus est pellentesque. In nulla posuere sollicitudin
+                        aliquam ultrices. Elementum pulvinar etiam non quam lacus suspendisse. Gravida in fermentum et sollicitudin ac orci. Vitae semper quis lectus nulla at volutpat diam. Tellus at urna condimentum mattis pellentesque id nibh. Vitae
+                        et leo duis ut. Duis tristique sollicitudin</p>
+                    <div class="d-flex float-sm-start gap-4 text-decoration-none flex-column mt-3">
+                        <div class="d-flex gap-5 align-items-center text-center">
+                            <button class="btn btn-light btn-submit ps-4 pe-4" type="button"><a href="/contactMe">Contact</a></button>
+                            <p class="text-decoration-none">
+                                <a href="https://drive.google.com/file/d/1xcWiH_RV-cBl-0dUsKyN_h2B5NYbdMPg/view?usp=share_link" id="link" target="_blank" class="text-decoration-none text-dark"> Download CV <i class="fa-solid fa-download fa-2x" style="color: black;"></a></i>
+                            </p>
+                        </div>
+                        <div class="d-flex float-sm-start gap-3 mt-5">
+                            <a href="https://www.linkedin.com/in/bagas-hananto-putra-86110820b/" id="logo" target="_blank"><i class="fa-brands fa-linkedin fa-3x" style="color: black;"></i></a>
+                            <a href="https://www.instagram.com/raelredd/" id="logo" target="_blank"><i class="fa-brands fa-square-instagram fa-3x" style="color: black;"></i></a>
+                            <a href="https://www.facebook.com/people/Bagas-Hananto-Putra-DananDjaya/100007154978265/?mibextid=ZbWKwL" id="logo" target="_blank"><i class="fa-brands fa-square-facebook fa-3x" style=" color: black;"></i></a>
+                            <a href="https://twitter.com/hanantodxxx?t=BShaFzErIFhsLT_a68ywhw&s=09" id="logo" target="_blank"><i class="fa-brands fa-square-twitter fa-3x" style="color: black;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-center mt-5 mb-5 shadow" style="width: 150rem; height: 23.5rem;">
+                    <img src="/public/images/Bagas.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Bagas Hananto Putra</h5>
+                        <p class="card-text">Fullstack Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Add My Project-->
+    <div class="container-fluid bg-light mt-5 mb-5">
+        <h1 class="fw-bold text-center mt-5 pt-5 pb-5">My Project</h1>
+        <div class="container d-flex flex-wrap justify-content-center gap-4">
+            {{range $index, $data := .Projects}}
+            <div class="card mb-5 shadow" style="width: 18rem;">
+                <img src="/public/images/cs.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">
+                        <a class="text-decoration-none list-group-item-action" href="/projectDetail/{{$data.Id}}" target="_blank">{{$data.Title}}</a></h5>
+                    <p style=" margin-bottom: 10px; color: gray;">{{$data.Start_date}} {{$data.End_date}}</p>
+                    <p class="card-text">{{$data.Description}}</p>
+                    <div class="d-flex mb-3 gap-3 justify-content-center">
+                        <div>{{$data.NodeJs}}<i class="fa-brands fa-node fa-2x"></i></div>
+
+                        <div>{{$data.Php}}<i class="fa-brands fa-php fa-2x"></i></div>
+
+                        <div>{{$data.Java}}<i class="fa-brands fa-java fa-2x"></i></div>
+
+                        <div>{{$data.Laravel}}<i class="fa-brands fa-laravel fa-2x"></i></div>
+
+                    </div>
+                    <div class="d-flex gap-3 justify-content-between">
+                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="/delete-project/{{$data.Id}}" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+    <!--Add My Project-->
+
+
+    <!--Landing Page-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

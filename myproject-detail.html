@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Project Details</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" img scr="/public/asset/logo/logo.png" href="/"><img src="/public/asset/logo/logo.png" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 ms-3 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Project">Add Project</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a class="nav-link pt-2" href="/loginForm">Login</a>
+                    <a class="nav-link pt-2 pe-4" href="/signForm">Sign Up</a>
+                    <button class="btn btn-light btn-submit" type="button"><a href="/contactMe">Contact Me</a></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Navbar End-->
+
+    <section>
+        <div class="container container-1 mt-5 p-5">
+            <h1 class="text-center mb-5 fs-1 fw-bold">{{.Project.Title}}</h1>
+            <div class="d-flex gap-5">
+                <img src="/public/asset/logo/sunlight-sunny-land-scenic-weather.jpg" style="max-height: 400px; max-width: 800px" class="rounded">
+                <div class="marginleft">
+                    <div class="mb-4">
+                        <h3>Duration</h3>
+                        <i class="fa fa-calendar-days"> </i> <span>{{.Project.Start_date}} Hingga {{.Project.End_date}}</span>
+                    </div>
+                    <div class="mt-3">
+                        <h3>Technologies</h3>
+                        <i class="fa-brands fa-node fa-2x"></i>
+                        <i class="fa-brands fa-php fa-2x"></i>
+                        <i class="fa-brands fa-java fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <p>{{.Project.Description}}</p>
+            </div>
+        </div>
+    </section>
+    <script src="/public/js/project.js"></script>
+</body>
+
+</html>

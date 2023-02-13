@@ -1,0 +1,489 @@
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #ddd;
+            margin: auto;
+            width: 100%;
+        }
+        
+        p {
+            font-size: 15px;
+        }
+        
+        section {
+            padding: 30px 70px 30px 70px;
+            position: relative;
+        }
+        /*Untuk Navbar*/
+        
+        nav {
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: white;
+            padding: 5px 10px 5px 10px;
+            height: 8vh;
+            align-items: center;
+        }
+        
+        nav div {
+            display: flex;
+            align-items: center;
+            flex: 50%;
+        }
+        
+        nav div.left-side {
+            padding-left: 90px;
+        }
+        
+        nav div.right-side {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 90px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-left: 40px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        nav ul li a.active {
+            color: #1e1e1e;
+            font-weight: 800;
+        }
+        
+        nav .right-side a {
+            font-size: 15px;
+            padding: 8px 20px;
+            background-color: #1e1e1e;
+            width: 100% auto;
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+        }
+        /*Untuk Navbar*/
+        /*Isi LP*/
+        /*Text, Sosial Media*/
+        
+        .warp {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border: 1px solid white;
+            background-color: white;
+            border-radius: 15px;
+            margin: 50px auto;
+        }
+        
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex: 80%;
+            margin: 80px 0 80px 50px;
+        }
+        
+        .text p {
+            text-align: justify;
+        }
+        
+        #logo {
+            padding: 0 15px 0 0;
+        }
+        
+        #link {
+            text-decoration: none;
+            color: #1e1e1e;
+        }
+        
+        #link-1 {
+            text-decoration: none;
+        }
+        
+        .button {
+            display: flex;
+            margin: 70px auto;
+        }
+        /*Text, Sosial Media*/
+        
+        .container {
+            display: flex;
+            overflow-x: block;
+            flex: 20%;
+            justify-content: center;
+            margin: 50px 50px 50px 50px;
+        }
+        
+        .font {
+            text-align: center;
+        }
+        
+        .card {
+            width: 20rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+        
+        #foto {
+            width: 20rem;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        /*Untuk Form*/
+        
+        div.Title {
+            text-align: center;
+            margin: 50px auto;
+        }
+        /*Untuk Form end*/
+        /*Responsive*/
+        
+        @media screen and (max-width: 800px) {
+            header {
+                width: 100%;
+            }
+            .left-side {
+                float: left;
+            }
+            .right-side {
+                width: 100%;
+            }
+            .right-side {
+                width: 100%;
+            }
+            section {
+                padding: 30px 20px 30px 20px;
+                position: relative;
+            }
+            .warp {
+                display: flex;
+                flex-direction: column;
+            }
+            .left {
+                order: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 100%;
+                margin: 50px 30px 50px 30px !important;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 40px 0 0 0 !important;
+            }
+            .form.group {
+                width: 100% !important;
+            }
+            header {
+                overflow-x: hidden;
+            }
+            nav div.left-side {
+                padding-left: 20px;
+            }
+            nav div.right-side {
+                padding-left: 20px;
+            }
+            nav .right-side a {
+                font-size: 15px;
+                align-items: center;
+                display: flex;
+                padding: 5px 20px 5px 20px;
+                margin: 0 150px 0 0px;
+                background-color: #1e1e1e;
+                width: 100% auto;
+                border-radius: 8px;
+                color: #fff;
+                text-decoration: none;
+            }
+            body {
+                width: 100%;
+            }
+            .form-group {
+                overflow-x: hidden;
+            }
+            #alert {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 93%;
+                padding: 5px;
+            }
+            #alert-contact {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 85%;
+                padding: 2px;
+            }
+            .marginleft {
+                margin: auto;
+            }
+            .margintop {
+                margin-left: -35px;
+            }
+            .marginbottom {
+                margin-left: -35px;
+            }
+            .fotocontent {
+                justify-items: center;
+                display: flex;
+                border-radius: 5px;
+                width: 100% !important;
+            }
+            .p {
+                text-align: left !important;
+            }
+        }
+        /*Responsive*/
+        
+        .date {
+            display: flex;
+        }
+        
+        #start {
+            box-shadow: 0 0px 8px 0 rgba(0, 0, 8, 0.2);
+            border: none;
+        }
+        
+        #end {
+            box-shadow: 0 0px 8px 0 rgba(0, 0, 8, 0.2);
+            border: none;
+        }
+        
+        #name {
+            box-shadow: 0 0px 8px 0 rgba(0, 0, 8, 0.2);
+            border: none;
+        }
+        
+        #phone {
+            box-shadow: 0 0px 8px 0 rgba(0, 0, 8, 0.2);
+            border: none;
+        }
+        
+        #email {
+            box-shadow: 0 0px 8px 0 rgba(0, 0, 8, 0.2);
+            border: none;
+        }
+        
+        #subject {
+            box-shadow: 0 0px 8px 0 rgba(0, 0, 8, 0.2);
+            border: none;
+        }
+        
+        #description {
+            box-shadow: 0 0px 8px 0 rgba(0, 0, 8, 0.2);
+            border: none;
+        }
+        
+        #button {
+            box-shadow: 0 0px 8px 0 rgba(0, 0, 8, 0.2);
+            border: none;
+        }
+        
+        .atasbawah {
+            display: flex;
+        }
+        
+        .bawah {
+            margin: 0 100px 0 0;
+        }
+        
+        .bawahatas {
+            display: flex;
+        }
+        
+        .atas {
+            margin: 0 71px 0 0;
+        }
+        
+        #java {
+            margin: 3px;
+        }
+        
+        #laravel {
+            margin: 3px;
+        }
+        
+        #image_att {
+            background-color: white;
+            box-shadow: 0 0px 8px 0 rgba(0, 0, 8, 0.2);
+        }
+        
+         ::-webkit-file-upload-button {
+            color: #1e1e1e;
+            background-color: #c4c4c4;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 15px 5px 15px;
+            cursor: pointer;
+        }
+        
+        .input {
+            padding: 20px 0 20px 0;
+        }
+        /*Navbar css js*/
+        
+        .form-group {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            position: relative;
+        }
+        
+        .alert {
+            box-sizing: border-box;
+            width: 25.5%;
+            padding: 1px 20px 1px 20px;
+            margin: -30px 0 20px 0;
+            text-align: center;
+            background-color: rgb(255, 0, 0);
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+        }
+        
+        .alert-contact {
+            box-sizing: border-box;
+            width: 23%;
+            padding: 1px 0 1px 0;
+            margin: -30px 0 20px 0;
+            text-align: center;
+            background-color: rgb(255, 0, 0);
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+        }
+        
+        .card-project {
+            width: 300px;
+            height: fit-content;
+            display: grid;
+            margin: 10px auto;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 0px 8px 0 rgba(0, 0, 8, 0.2);
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .tec {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        
+        .btn-primary {
+            width: fit-content;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: medium;
+            color: white;
+            background-color: #1e1e1e;
+            display: block;
+            border: 0px;
+            text-decoration: none;
+            user-select: none;
+        }
+        
+        .btn-danger {
+            width: fit-content;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: medium;
+            color: white;
+            background-color: #ea0c0c;
+            display: block;
+            border: 0px;
+            text-decoration: none;
+            user-select: none;
+        }
+        
+        .tec-in {
+            margin: 20px auto;
+            display: flex;
+        }
+        
+        .container-project {
+            background-color: white !important;
+            width: 100%;
+            padding: 50px 50px 50px 50px;
+            margin: 50px;
+            border-radius: 5px;
+        }
+        
+        .text-center {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .detail-image {
+            display: flex;
+        }
+        
+        .center {
+            display: flex;
+        }
+        
+        .d-flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .marginleft {
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+        
+        .margintop {
+            margin-top: 30px;
+        }
+        
+        .p {
+            text-align: justify;
+            margin-top: 40px;
+        }
+        
+        .container-1 {
+            box-shadow: 0 0px 8px 0 rgba(0, 0, 8, 0.2);
+            border-radius: 5px;
+            margin: 50px;
+            background-color: white;
+            padding: 50px;
+        }
+        
+        #fotocontent {
+            border-radius: 5px;
+            width: 50%;
+        }
+        
+        #linked {
+            text-decoration: none;
+        }

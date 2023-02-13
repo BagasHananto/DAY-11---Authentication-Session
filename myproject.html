@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" img scr="/public/asset/logo/logo.png" href="/"><img src="/public/asset/logo/logo.png" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 ms-3 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" href="/Project">Add Project</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a class="nav-link pt-2" href="/loginForm">Login</a>
+                    <a class="nav-link pt-2 pe-4" href="/signForm">Sign Up</a>
+                    <button class="btn btn-light btn-submit" type="button"><a href="/contactMe">Contact Me</a></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Navbar End-->
+
+    <!--Alert-->
+    <div class="alert" id="alert" role="alert"></div>
+    <!--Alert-->
+
+    <!--Navbar End-->
+    <div class="container w-50 container-1 mb-5">
+        <form action="/addProject" method="post">
+            <div class="text-center fs-1 fw-bold">
+                <p class="pt-5 pb-2">Add My Project</p>
+            </div>
+            <div class="container w-auto pb-2">
+                <div class="name mb-4">
+                    <label for="name" class="form-label fs-5 fw-medium">Project Name</label>
+                    <input name="title" type="text" class="form-control" id="name" placeholder="Input your name project">
+                </div>
+                <div class="date row">
+                    <div class="mb-4 col-md-6">
+                        <label for="startDate" class="form-label fs-5 fw-medium">Start Date</label>
+                        <input name="start-date" type="date" class="form-control" id="start">
+                    </div>
+                    <div class="mb-4 col-md-6">
+                        <label for="endDate" class="form-label fs-5 fw-medium">End Date</label>
+                        <input name="end-date" type="date" class="form-control" id="end">
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="description" class="form-label fs-5 fw-medium">Message</label>
+                    <textarea name="description" class="form-control" placeholder="Input message here" id="description" rows="3"></textarea>
+                </div>
+                <div>
+                    <label for="technologies" class="form-label fs-5 fw-medium">Technologies</label>
+                    <div class="technologi d-flex gap-5 mb-4">
+                        <div class="bawahatas">
+                            <div class="atas">
+                                <input type="checkbox" id="nodejs" name="NodeJs">
+                                <label for="nodejs">NodeJs</label>
+                            </div>
+                            <input type="checkbox" id="java" name="Java">
+                            <label for="java">Java</label>
+                        </div>
+                        <div class="atasbawah">
+                            <div class="bawah">
+                                <input type="checkbox" id="php" name="Php">
+                                <label for="php">PHP</label>
+                            </div>
+                            <input type="checkbox" id="laravel" name="Laravel">
+                            <label for="laravel">Laravel</label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="formFile" class="form-label fs-5 fw-medium">Upload Image</label>
+                        <input class="form-control" type="file" id="formFile" accept=".png, .jpg, .jpeg">
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-4">
+                        <button class="btn btn-light submit-contact ps-4 pe-4" type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <!--<div class="container-fluid bg-light mt-5 mb-5">
+        <h1 class="fw-bold text-center mt-5 pt-5 pb-5">My Project</h1>
+        <div class="container d-flex flex-wrap justify-content-center gap-4">
+            {{range $index, $data := .Projects}}
+            <div class="card mb-5 shadow p-3" style="width: 18rem;">
+                <img src="/public/images/cs.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">
+                        <a class="text-decoration-none list-group-item-action" href="/projectDetail/1" target="_blank">{{$data.Title}}</a></h5>
+                    <p style=" margin-bottom: 10px; color: gray;">12 Mei 2023 20:30 WIB</p>
+                    <p class="card-text">{{$data.Content}}</p>
+                    <div class="d-flex mb-3 gap-3 justify-content-center">
+                        <div><i class="fa-brands fa-node fa-2x"></i></div>
+                        <div><i class="fa-brands fa-php fa-2x"></i></div>
+                        <div><i class="fa-brands fa-java fa-2x"></i></div>
+                        <div><i class="fa-brands fa-laravel fa-2x"></i></div>
+                    </div>
+                    <div class="d-flex gap-3 justify-content-between">
+                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>-->
+
+
+    <div class="d-flex justify-content-center ms-5 me-5 flex-wrap">
+        <div id="content-project" class="d-flex justify-content-center ms-5 me-5 flex-wrap">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--
+        <script src="/public/js/project.js"></script>
+    -->
+</body>
+
+</html>
